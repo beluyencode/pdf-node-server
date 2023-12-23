@@ -1,0 +1,482 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.header {
+    width: 100%;
+    min-height: 110px;
+    background-color: #4960F9;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.sub_bg_header {
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 10px);
+    min-height: 110px;
+    background: #87F0FF;
+    z-index: -1;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    height: fit-content;
+    margin-top: 65px;
+    margin-bottom: 24px;
+}
+
+.content {
+    margin-top: 10px;
+}
+
+.content_title {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+
+.content_pay {
+    padding: 24px;
+    width: calc(100% - 48px);
+}
+
+.content_pay_row {
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+
+}
+
+#service {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content_pay_item {
+    padding: 16px;
+    width: 38%;
+    border-radius: 28.398px;
+    background: linear-gradient(117deg, #FFCF87 7%, #D99F49 89.17%);
+    margin-bottom: 16px;
+    color: #7D571F;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.content_pay_item>p {
+    margin: 8px 0px;
+}
+
+
+.content_pay_item.active {
+    background: linear-gradient(295deg, #AF1DA9 6.49%, #D21CD6 97.97%);
+    color: white !important;
+}
+
+
+.content_pay_item.active>.content_pay_money {
+    color: white !important;
+}
+
+.content_pay_money {
+    color: #7D571F;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.btn_pay {
+    padding: 22px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    box-shadow: 0px 8px 16px 0px rgba(27, 57, 255, 0.20);
+    border: none;
+    border-radius: 28px;
+    width: 90%;
+    margin: 16px auto;
+    position: relative;
+    background: linear-gradient(95deg, #4960F9 21.25%, #1433FF 81.44%);
+    overflow: hidden;
+}
+
+.btn_pay>.btn_pay_text {
+    margin-right: 62px;
+}
+
+.btn_pay>.btn_pay_bg_bottom {
+    position: absolute;
+    right: -25px;
+    top: 40%;
+}
+
+.btn_pay>.btn_pay_bg_top {
+    position: absolute;
+    right: -25px;
+    top: 0%;
+    z-index: 1;
+}
+
+#loadingScan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+#loadingScan>svg {
+    animation: spin 2s linear infinite;
+    width: 50px;
+    height: 50px;
+}
+
+
+#error_scan {
+    color: red;
+    display: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 16px;
+}
+
+.btn_pay>.btn_pay_bg_center {
+    position: absolute;
+    top: 51%;
+    right: 16px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#btn_pay {
+    display: none;
+}
+
+.footer {
+    width: 100%;
+    color: white;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    background: #4960F9;
+    line-height: normal;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+}
+
+.payment_method {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment_method_item {
+    margin-bottom: 16px;
+}
+
+#step_3 {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.step_3_title {
+    margin-top: 20px !important;
+}
+
+.spinner {
+    position: relative;
+}
+
+.count_time_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #3F3D56;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.count_time>p {
+    color: #3F3D56;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    margin-bottom: 24px;
+}
+
+.spinner>svg {
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.pay_done {}
+
+.pay_done_info {
+    border-radius: 33.876px;
+    background: white;
+    box-shadow: 0px 7.62201px 41.4976px 0px rgba(89, 136, 248, 0.25);
+    padding: 8px 16px;
+    width: 80%;
+    margin: auto;
+}
+
+.exit {
+    border-radius: 28px;
+    background: linear-gradient(95deg, #4960F9 21.25%, #1433FF 81.44%);
+    box-shadow: 0px 8px 16px 0px rgba(27, 57, 255, 0.20);
+    color: white;
+    border: none;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 12px 0px;
+    width: 155px;
+    margin-top: 16px;
+}
+
+.content_title_error {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: center;
+    color: #2743FE;
+}
+
+#step_4>.content_title {
+    margin-bottom: 5px !important;
+}
+
+#step_4 {
+    padding: 16px;
+}
+
+#report_err_icon {
+    width: 50px;
+    height: 50px;
+}
+
+.content_title_error>span {
+    color: #F00;
+}
+
+.error_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error_form .btn_pay_text {
+    margin-right: 0px !important;
+}
+
+.error_form .btn_pay {
+    width: fit-content;
+    width: 50%;
+}
+
+.error_input {
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #FFF;
+    color: black;
+    padding: 9px;
+    font-size: 15px;
+    margin-bottom: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+#step_5 {
+    margin-top: auto;
+    text-align: center;
+}
+
+.done_res>svg {
+    width: 100px;
+    height: 100px;
+}
+
+.payment_method_confirm {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+
+}
+
+.bg_popup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.content_popup {
+    position: absolute;
+    width: 80%;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    display: none;
+}
+
+.content_popup_icon {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    margin-top: 0px;
+}
+
+#deedlink {
+    display: block;
+    padding: 8px 16px;
+    background: linear-gradient(95deg, #4960F9 21.25%, #1433FF 81.44%);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 16px;
+}
+
+.content_popup_close {
+    position: relative;
+}
+
+.content_popup_close>svg {
+    position: absolute;
+    right: 6px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.content_popup_loading {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#btn_pay:disabled,
+#btn_pay[disabled] {
+    opacity: 0.5;
+}
+
+textarea {
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #FFF;
+    color: black;
+    padding: 9px;
+    font-size: 15px;
+    margin-bottom: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    resize: none;
+}
+
+.content_popup_loading>svg {
+    animation: spin 2s linear infinite;
+    width: 50px;
+    height: 50px;
+}

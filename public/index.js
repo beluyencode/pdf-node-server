@@ -13,6 +13,7 @@
             }));
             exports.GenericCom = void 0;
             var _app = __webpack_require__(2);
+            console.log(__webpack_require__(2));
             var _preferences = __webpack_require__(41);
             var _download_manager = __webpack_require__(42);
             var _genericl10n = __webpack_require__(43);
@@ -59,6 +60,7 @@
                 value: true
             }));
             exports.PDFViewerApplication = exports.PDFPrintServiceFactory = exports.DefaultExternalServices = void 0;
+            console.log(typeof void 0);
             var _ui_utils = __webpack_require__(3);
             var _pdfjsLib = __webpack_require__(4);
             var _app_options = __webpack_require__(5);
@@ -804,6 +806,7 @@
                     throw new Error("PDF document not downloaded.");
                 },
                 async download(options = {}) {
+                    debugger
                     const url = this._downloadUrl,
                         filename = this._docFilename;
                     try {
@@ -818,6 +821,7 @@
                     }
                 },
                 async save(options = {}) {
+                    debugger
                     if (this._saveInProgress) {
                         return;
                     }
@@ -4485,6 +4489,7 @@
             exports.PDFDocumentProperties = void 0;
             var _ui_utils = __webpack_require__(3);
             var _pdfjsLib = __webpack_require__(4);
+            console.log(__webpack_require__(4));
             const DEFAULT_FIELD_CONTENT = "-";
             const NON_METRIC_LOCALES = ["en-us", "en-lr", "my"];
             const US_PAGE_NAMES = {
@@ -7408,6 +7413,7 @@
             }));
             exports.PDFSidebar = void 0;
             var _ui_utils = __webpack_require__(3);
+            console.log(_ui_utils);
             const SIDEBAR_WIDTH_VAR = "--sidebar-width";
             const SIDEBAR_MIN_WIDTH = 200;
             const SIDEBAR_RESIZING_CLASS = "sidebarResizing";
@@ -7857,8 +7863,20 @@
                         const viewport = firstPdfPage.getViewport({
                             scale: 1
                         });
+
                         for (let pageNum = 1; pageNum <= pagesCount; ++pageNum) {
                             const thumbnail = new _pdf_thumbnail_view.PDFThumbnailView({
+                                container: this.container,
+                                eventBus: this.eventBus,
+                                id: pageNum,
+                                defaultViewport: viewport.clone(),
+                                optionalContentConfigPromise,
+                                linkService: this.linkService,
+                                renderingQueue: this.renderingQueue,
+                                l10n: this.l10n,
+                                pageColors: this.pageColors
+                            });
+                            console.log({
                                 container: this.container,
                                 eventBus: this.eventBus,
                                 id: pageNum,
@@ -8130,6 +8148,7 @@
                     }
                 }
                 async draw() {
+                    console.log(321);
                     if (this.renderingState !== _ui_utils.RenderingStates.INITIAL) {
                         console.error("Must be in new state before drawing");
                         return undefined;
@@ -8768,6 +8787,7 @@
                         const viewport = firstPdfPage.getViewport({
                             scale: scale * _pdfjsLib.PixelsPerInch.PDF_TO_CSS_UNITS
                         });
+                        console.log(_pdfjsLib.PixelsPerInch.PDF_TO_CSS_UNITS);
                         this.viewer.style.setProperty("--scale-factor", viewport.scale);
                         if (this.pageColors?.foreground === "CanvasText" || this.pageColors?.background === "Canvas") {
                             this.viewer.style.setProperty("--hcm-highligh-filter", pdfDocument.filterFactory.addHighlightHCMFilter("CanvasText", "Canvas", "HighlightText", "Highlight"));
@@ -10098,7 +10118,6 @@
                         textLayer,
                         viewport
                     } = this;
-                    console.log(123);
                     if (!textLayer) {
                         return;
                     }
@@ -10432,6 +10451,7 @@
                     }
                 }
                 async draw() {
+                    console.log(123);
                     if (this.renderingState !== _ui_utils.RenderingStates.INITIAL) {
                         console.error("Must be in new state before drawing");
                         this.reset();
@@ -13083,7 +13103,7 @@
                 function getL10nData(key, args, fallback) {
                     var data = gL10nData[key];
                     if (!data) {
-                        console.warn('#' + key + ' is undefined.');
+                        // console.warn('#' + key + ' is undefined.');
                         if (!fallback) {
                             return null;
                         }
@@ -13134,7 +13154,7 @@
                     if (!l10n.id) return;
                     var data = getL10nData(l10n.id, l10n.args);
                     if (!data) {
-                        console.warn('#' + l10n.id + ' is undefined.');
+                        // console.warn('#' + l10n.id + ' is undefined.');
                         return;
                     }
                     if (data[gTextProp]) {
@@ -13784,7 +13804,7 @@
                 debuggerScriptPath: "./debugger.js"
             };
         }
-        function webViewerLoad() {
+        window.viewPdf = function webViewerLoad() {
             const config = getViewerConfiguration();
             const event = new CustomEvent("webviewerloaded", {
                 bubbles: true,
@@ -13802,11 +13822,11 @@
             _app.PDFViewerApplication.run(config);
         }
         document.blockUnblockOnload?.(true);
-        if (document.readyState === "interactive" || document.readyState === "complete") {
-            webViewerLoad();
-        } else {
-            document.addEventListener("DOMContentLoaded", webViewerLoad, true);
-        }
+        // if (document.readyState === "interactive" || document.readyState === "complete") {
+        //     webViewerLoad();
+        // } else {
+        //     document.addEventListener("DOMContentLoaded", webViewerLoad, true);
+        // }
     })();
 
     /******/

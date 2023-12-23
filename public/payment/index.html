@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <p class="title" id="title_name_device">
+
+        </p>
+        <div class="sub_bg_header"></div>
+    </div>
+    <div class="content">
+        <div id="step_1">
+            <p class="content_title">
+                Lựa chọn dịch vụ
+            </p>
+            <div class="content_pay">
+                <div id="service">
+                </div>
+                <button class="btn_pay" id="btn_pay" disabled>
+                    <span class="btn_pay_text">
+                        Thanh toán
+                    </span>
+                    <div class="btn_pay_bg_center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="24" viewBox="0 0 17 24" fill="none">
+                            <g clip-path="url(#clip0_172_1565)">
+                                <path
+                                    d="M11.8698 12.4068L0.622396 21.1173C-0.207466 21.76 -0.207466 22.802 0.622396 23.4447C1.45226 24.0874 2.79774 24.0874 3.6276 23.4447L16.3776 13.5705C17.2075 12.9278 17.2075 11.8858 16.3776 11.2431L3.6276 1.36877C2.79774 0.726084 1.45226 0.726084 0.622396 1.36877C-0.207466 2.01147 -0.207466 3.05347 0.622396 3.69617L11.8698 12.4068Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_172_1565">
+                                    <rect y="0.880005" width="17" height="23.04" rx="8.5" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="btn_pay_bg_top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="128" height="55" viewBox="0 0 128 55"
+                            fill="none">
+                            <path opacity="0.7"
+                                d="M24.3669 47.4464C-4.14025 36.2266 -5.90787 10.3274 14.7551 -5.15156C35.4181 -20.6305 75.2784 -24.0833 103.785 -12.8636C132.293 -1.64387 134.06 24.2554 113.397 39.7343C92.7342 55.2133 52.8739 58.6661 24.3669 47.4464Z"
+                                fill="url(#paint0_linear_172_1564)" />
+                            <defs>
+                                <linearGradient id="paint0_linear_172_1564" x1="32.3843" y1="0.0763915" x2="70.4531"
+                                    y2="142.337" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#C72FF8" />
+                                    <stop offset="0.103053" stop-color="#C130F1" stop-opacity="0.840886" />
+                                    <stop offset="0.177433" stop-color="#BF30EE" stop-opacity="0.778619" />
+                                    <stop offset="1" stop-color="#A834D0" stop-opacity="0.09" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="btn_pay_bg_bottom">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="68" viewBox="0 0 120 68"
+                            fill="none">
+                            <ellipse opacity="0.7" cx="54.9166" cy="47.3967" rx="54.9166" ry="47.3967"
+                                transform="matrix(0.924487 -0.381212 0.813455 0.581628 -25.2001 28.1777)"
+                                fill="url(#paint0_linear_172_1563)" />
+                            <defs>
+                                <linearGradient id="paint0_linear_172_1563" x1="90.7997" y1="81.5978" x2="33.6943"
+                                    y2="-6.22735" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#5264F9" />
+                                    <stop offset="1" stop-color="#3AF9EF" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </button>
+                <div id="error_scan">
+
+                </div>
+                <div id="loadingScan">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="170" height="170" viewBox="0 0 170 170" fill="none">
+                        <path
+                            d="M170 85C170 131.944 131.944 170 85 170C38.0558 170 0 131.944 0 85C0 38.0558 38.0558 0 85 0C131.944 0 170 38.0558 170 85ZM15.9385 85C15.9385 123.142 46.8584 154.061 85 154.061C123.142 154.061 154.061 123.142 154.061 85C154.061 46.8584 123.142 15.9385 85 15.9385C46.8584 15.9385 15.9385 46.8584 15.9385 85Z"
+                            fill="#CCCCCC" />
+                        <path
+                            d="M162.031 85C166.432 85 170.039 81.4243 169.627 77.0423C168.834 68.6086 166.783 60.3256 163.53 52.4719C159.258 42.1592 152.997 32.7889 145.104 24.8959C137.211 17.0029 127.841 10.7419 117.528 6.47024C109.674 3.21715 101.391 1.16636 92.9577 0.373311C88.5757 -0.0387379 85 3.56796 85 7.96926C85 12.3706 88.5796 15.891 92.9517 16.3978C99.2904 17.1325 105.51 18.7437 111.429 21.1955C119.808 24.6662 127.421 29.7532 133.834 36.1662C140.247 42.5791 145.334 50.1924 148.804 58.5713C151.256 64.4904 152.867 70.7096 153.602 77.0483C154.109 81.4204 157.629 85 162.031 85Z"
+                            fill="#3F3D56" />
+                    </svg>
+                    Đang kiểm tra thiết bị ...
+                </div>
+            </div>
+        </div>
+        <div id="step_2" style="display: none;">
+            <p class="content_title">
+                Lựa chọn hình thức thanh toán
+            </p>
+            <div class="payment_method">
+                <img src="./zalopay.png" alt="" class="payment_method_item" payment-partner="zalopay">
+                <img src="./momo.png" alt="" class="payment_method_item" payment-partner="momo">
+                <img src="./vnpay.png" alt="" class="payment_method_item" payment-partner="vnpay">
+            </div>
+            <div class="payment_method_confirm" id="payment_method_confirm">
+                <div class="bg_popup">
+                </div>
+                <div class="content_popup_loading" id="payment_method_confirm_loading">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 170 170"
+                        fill="none">
+                        <path
+                            d="M170 85C170 131.944 131.944 170 85 170C38.0558 170 0 131.944 0 85C0 38.0558 38.0558 0 85 0C131.944 0 170 38.0558 170 85ZM15.9385 85C15.9385 123.142 46.8584 154.061 85 154.061C123.142 154.061 154.061 123.142 154.061 85C154.061 46.8584 123.142 15.9385 85 15.9385C46.8584 15.9385 15.9385 46.8584 15.9385 85Z"
+                            fill="#CCCCCC" />
+                        <path
+                            d="M162.031 85C166.432 85 170.039 81.4243 169.627 77.0423C168.834 68.6086 166.783 60.3256 163.53 52.4719C159.258 42.1592 152.997 32.7889 145.104 24.8959C137.211 17.0029 127.841 10.7419 117.528 6.47024C109.674 3.21715 101.391 1.16636 92.9577 0.373311C88.5757 -0.0387379 85 3.56796 85 7.96926C85 12.3706 88.5796 15.891 92.9517 16.3978C99.2904 17.1325 105.51 18.7437 111.429 21.1955C119.808 24.6662 127.421 29.7532 133.834 36.1662C140.247 42.5791 145.334 50.1924 148.804 58.5713C151.256 64.4904 152.867 70.7096 153.602 77.0483C154.109 81.4204 157.629 85 162.031 85Z"
+                            fill="#3F3D56" />
+                    </svg>
+                </div>
+                <div class="content_popup" id="payment_method_confirm_content">
+                    <div class="content_popup_close">
+                        <svg id="closePopup" fill="#000000" height="20" width="20" version="1.1" id="Capa_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 460.775 460.775" xml:space="preserve">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <img id="iconPopup" src="./vnpay.png" alt="" class="content_popup_icon">
+                    <p class="content_title step_3_title">
+                        Chi tiết giao dịch
+                    </p>
+                    <p class="content_title step_3_title" id="chooseServiceMoneyPopup"></p>
+                    <p id="chooseServicePopup"></p>
+                    <a href="" id="deedlink">
+                        xác nhận
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="step_3" style="display: none;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                    <path
+                        d="M30 60C46.5685 60 60 46.5685 60 30C60 13.4315 46.5685 0 30 0C13.4315 0 0 13.4315 0 30C0 46.5685 13.4315 60 30 60Z"
+                        fill="#69F0AE" />
+                    <path
+                        d="M42.6866 20.8507C42.1904 20.3439 41.386 20.3439 40.8897 20.8507L25.6673 36.397L19.816 30.4213C19.3199 29.9145 18.5154 29.9146 18.0191 30.4213C17.5229 30.928 17.5229 31.7496 18.0191 32.2563L24.7688 39.1495C25.2649 39.6562 26.0699 39.6559 26.5657 39.1495L42.6866 22.6858C43.1828 22.179 43.1828 21.3574 42.6866 20.8507Z"
+                        fill="white" stroke="white" stroke-width="4.88889" />
+                </svg>
+            </div>
+            <p class="content_title step_3_title" id="step_3_title">
+                Thanh toán thành công
+            </p>
+            <div class="count_time" id="loading">
+                <p>
+                    Đang khởi động máy...
+                </p>
+                <div class="spinner">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="170" height="170" viewBox="0 0 170 170" fill="none">
+                        <path
+                            d="M170 85C170 131.944 131.944 170 85 170C38.0558 170 0 131.944 0 85C0 38.0558 38.0558 0 85 0C131.944 0 170 38.0558 170 85ZM15.9385 85C15.9385 123.142 46.8584 154.061 85 154.061C123.142 154.061 154.061 123.142 154.061 85C154.061 46.8584 123.142 15.9385 85 15.9385C46.8584 15.9385 15.9385 46.8584 15.9385 85Z"
+                            fill="#CCCCCC" />
+                        <path
+                            d="M162.031 85C166.432 85 170.039 81.4243 169.627 77.0423C168.834 68.6086 166.783 60.3256 163.53 52.4719C159.258 42.1592 152.997 32.7889 145.104 24.8959C137.211 17.0029 127.841 10.7419 117.528 6.47024C109.674 3.21715 101.391 1.16636 92.9577 0.373311C88.5757 -0.0387379 85 3.56796 85 7.96926C85 12.3706 88.5796 15.891 92.9517 16.3978C99.2904 17.1325 105.51 18.7437 111.429 21.1955C119.808 24.6662 127.421 29.7532 133.834 36.1662C140.247 42.5791 145.334 50.1924 148.804 58.5713C151.256 64.4904 152.867 70.7096 153.602 77.0483C154.109 81.4204 157.629 85 162.031 85Z"
+                            fill="#3F3D56" />
+                    </svg>
+                    <span class="count_time_text" id="count_time_text">
+                        3
+                    </span>
+                </div>
+            </div>
+            <div class="pay_done" id="pay_done" style="display: none;">
+                <div class="pay_done_info">
+                    <p class="content_title step_3_title">
+                        Chi tiết giao dịch
+                    </p>
+                    <p class="content_title step_3_title" id="chooseServiceMoney">VND 20,000</p>
+                    <p id="chooseService"> </p>
+                    <p id="info_payment_device">Ghế Massage 01 -
+                        Tầng 01 TTTM Vincom Bà Triệu
+                    </p>
+                </div>
+                <button class="exit">
+                    Xem thêm
+                </button>
+            </div>
+        </div>
+        <div id="step_4" style="display: none;">
+            <p class="content_title">
+                Xảy ra sự cố trong quá trình khởi động máy
+            </p>
+            <p class="content_title_error">
+                Quý khách vui lòng để lại thông tin,
+                chúng tôi sẽ liên lạc để thực hiện hoàn tiền cho quý khách trong thời gian sớm nhất
+                Cảm ơn quý khách! <br>
+                <span>
+                    Hotline: 0818813399
+                </span>
+            </p>
+            <form id="form_report">
+                <div class="error_form">
+                    <input type="text" name="name" class="error_input" placeholder="Họ và tên " required>
+                    <input type="text" name="phone" class="error_input" placeholder="Số điện thoại  " required>
+                    <input type="email" name="email" class="error_input" placeholder="Email" required>
+                    <textarea name="note" id="" cols="30" rows="4" required></textarea>
+                    <button class="btn_pay" id="send_res">
+                        <span class="btn_pay_text">
+                            Gửi thông tin
+                        </span>
+                    </button>
+                </div>
+            </form>
+            <div class="payment_method_confirm" id="report_err">
+                <div class="bg_popup">
+                </div>
+                <div class="content_popup" style="display: block;">
+                    <div class="content_popup_close">
+                        <svg id="closePopupform" fill="#000000" height="20" width="20" version="1.1" id="Capa_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 460.775 460.775" xml:space="preserve">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <svg id="report_err_icon" fill="#F00" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 478.125 478.125" xml:space="preserve">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <g>
+                                <g>
+                                    <g>
+                                        <circle cx="239.904" cy="314.721" r="35.878"></circle>
+                                        <path
+                                            d="M256.657,127.525h-31.9c-10.557,0-19.125,8.645-19.125,19.125v101.975c0,10.48,8.645,19.125,19.125,19.125h31.9 c10.48,0,19.125-8.645,19.125-19.125V146.65C275.782,136.17,267.138,127.525,256.657,127.525z">
+                                        </path>
+                                        <path
+                                            d="M239.062,0C106.947,0,0,106.947,0,239.062s106.947,239.062,239.062,239.062c132.115,0,239.062-106.947,239.062-239.062 S371.178,0,239.062,0z M239.292,409.734c-94.171,0-170.595-76.348-170.595-170.596c0-94.248,76.347-170.595,170.595-170.595 s170.595,76.347,170.595,170.595C409.887,333.387,333.464,409.734,239.292,409.734z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <p class="content_title step_3_title">
+                        Hệ thống đang gặp vấn đề! vui lòng thử lại sau <br>
+                        Hoặc vui lòng xem hướng dẫn hoàn tiền <a href="https://autoqr.vn/refund-policy">
+                            <i>
+                                tại đây
+                            </i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="step_5" style="display: none;">
+            <p class="content_title step_3_title" id="step_3_title">
+                Gửi thông tin thành công
+            </p>
+            <div class="done_res">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                    <path
+                        d="M30 60C46.5685 60 60 46.5685 60 30C60 13.4315 46.5685 0 30 0C13.4315 0 0 13.4315 0 30C0 46.5685 13.4315 60 30 60Z"
+                        fill="#69F0AE" />
+                    <path
+                        d="M42.6866 20.8507C42.1904 20.3439 41.386 20.3439 40.8897 20.8507L25.6673 36.397L19.816 30.4213C19.3199 29.9145 18.5154 29.9146 18.0191 30.4213C17.5229 30.928 17.5229 31.7496 18.0191 32.2563L24.7688 39.1495C25.2649 39.6562 26.0699 39.6559 26.5657 39.1495L42.6866 22.6858C43.1828 22.179 43.1828 21.3574 42.6866 20.8507Z"
+                        fill="white" stroke="white" stroke-width="4.88889" />
+                </svg>
+            </div>
+            <button class="exit">
+                Xem thêm
+            </button>
+        </div>
+    </div>
+    <div class="footer">
+        @2023 Reiway Vietnam. All Rights Reserved.
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
